@@ -1,0 +1,18 @@
+class Point
+  def initialize(x,y) # Initialize method 
+     @x,@y = x, y      # Sets initial values for instance variables
+  end
+
+end
+
+class Point3D < Point
+ def initialize(x,y,z)
+    super(x,y)
+   @z = z
+ end
+ def to_s
+ puts "(#{@x}, #{@y}, #{@z})"  # Variables @x and @y inherited?
+ end
+end
+
+Point3D.new(1,2,3).to_s 
